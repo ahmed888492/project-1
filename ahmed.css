@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+body {
+    height: 100vh;
+    background:  hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  sans-serif;
+}
+body::before {
+    content:"";
+    background-image: url("../first/top.svg");
+    width: 800px;
+    height: 450px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+body::after {
+    content:"";
+    background-image: url("../first/bottom.svg");
+    width: 800px;
+    height: 450px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    top: 0;
+    left: 0;
+}
+.img-content {
+    width: 250px;
+    background: url("../first/background.svg");
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+.img-content img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+.container {
+    width: 250px;
+    height: 250px;
+    z-index: 2;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.t-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+strong {
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+.t-content small {
+    font-size: .6em;
+    letter-spacing: 2px;
+    color: #aaa9a9;
+    padding-left: 7px;
+}
+.p-text {
+    font-size: 12px;
+    color: #aaa9a9;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.text-content span {
+    width: 100%;
+    background-color:#ccc6c6;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+}
+.number,
+.text{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: .9em;
+    margin-top: 5px;
+}
+.text p {
+    font-size: small;
+    color:#a5a0a0;
+    margin-right: 20px;
+    letter-spacing: 2px;
+}
+@media(min-width:374px) and (max-width:430px){
+    body::before,
+    body::after{
+        width: 500px;
+        height: 250px;
+    }
+}
